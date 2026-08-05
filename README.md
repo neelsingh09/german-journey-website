@@ -1,2 +1,1 @@
-This is a personal website I am building to log/monitor my German logging progress. Every other Sunday, I will write a paragraph about what I learned in German for
-those two weeks. I am making this into an app rather than use a simple journal to get hands-on experience with a real, personal HTML project. 
+This is a simple yet personal website I am building to log/monitor my German logging progress. Every other Sunday, I will write a paragraph about what I learned in German for those two weeks. I am making this into an app rather than use a simple journal to get hands-on experience with a real, personal HTML project. It won't be very technical or advanced, but it will be a coding project nonetheless. 
