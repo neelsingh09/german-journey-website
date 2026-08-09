@@ -8,54 +8,589 @@
   </head>
 
   <body>
-    <header class="desktop-header-3 fixed-top">
+    <header class="site-header">
+  <nav class="navbar">
 
-    <div class="container">
-	
-      <nav class="navbar navbar-expand-lg navbar-dark">
-           
-          <b class="navbar-brand">German Learning</b> 
+<a href="home.html" class="navbar-brand">
+  Neel's German Learning
+</a>
 
-			<div class="dropdown">
- 				<button onclick="myFunction()" class="dropbtn">Navigation</button>
- 				<div id="myDropdown" class="dropdown-content">
-   					<a href="home.html">Home</a>
-   					<a href="my-journey.html">My Journey</a>
-   					<a href="vocab.html">Vocabulary</a>
-					  <a href="grammar.html">Grammar</a>
-					  <a href="resources.html">Resources</a>
-					  <a href="progress.html">Progress</a>
-					  <a href="contact.html">Contact</a>
-				 </div>
-			</div>
-        </nav>
+<div class="dropdown">
+  <button onclick="navButton()" class="dropbtn">
+    Navigation <span class="arrow">▼</span>
+  </button>
 
+  <div id="myDropdown" class="dropdown-content">
+    <a href="home.html">Home</a>
+    <a href="my-journey.html">My Journey</a>
+    <a href="vocab.html">Vocabulary</a>
+    <a href="grammar.html">Grammar</a>
+    <a href="resources.html">Resources</a>
+    <a href="progress.html">Progress</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- =========================
+       PAGE INTRO
+       ========================= -->
+
+  <section class="progress-intro">
+
+<h1>Progress</h1>
+
+<div class="intro-divider"></div>
+
+<p>
+  A record of my German-learning journey, updated each month
+  as I continue to learn and improve.
+</p>
+
+  </section>
+
+  <!-- =========================
+       YEAR SELECTOR
+       ========================= -->
+
+  <section class="year-selector">
+
+<button
+  class="year-button active"
+  onclick="showYear('year-2026', this)">
+  2026
+</button>
+
+<button
+  class="year-button"
+  onclick="showYear('year-2027', this)">
+  2027
+</button>
+
+  </section>
+
+  <!-- =========================================================
+       2026
+       ========================================================= -->
+
+  <section id="year-2026" class="year-content active-year">
+
+<section class="progress-calendar">
+
+  <div class="calendar-header">
+    <h2>2026</h2>
+    <p>Select a month to view my progress.</p>
+  </div>
+
+
+  <div class="month-grid">
+
+    <button class="month-button"
+      onclick="showMonth('january-2026')">
+      January
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('february-2026')">
+      February
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('march-2026')">
+      March
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('april-2026')">
+      April
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('may-2026')">
+      May
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('june-2026')">
+      June
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('july-2026')">
+      July
+    </button>
+
+    <button class="month-button active"
+      onclick="showMonth('august-2026')">
+      August
+      <span class="update-indicator"></span>
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('september-2026')">
+      September
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('october-2026')">
+      October
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('november-2026')">
+      November
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('december-2026')">
+      December
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- 2026 MONTHLY CONTENT -->
+
+<section class="progress-updates">
+
+  <div id="january-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>January 2026</h2>
     </div>
 
-    <div class="timeline-item">
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
 
-    <div class="timeline-dot"></div>
 
-    <div class="timeline-card">
+  <div id="february-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>February 2026</h2>
+    </div>
 
-        <h2>Update 1 | August 6, 2026</h2>
-  
-        <div class="content">
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
 
-            <img src="original_placement_exam_score.png" alt="Update 1 Progress">
 
-            <p>
-                On this first day, I simply took a placement test on Goethe-Institut to find out my current, approximate German level.
-                I mainly used context clues and filled in some blanks that I didn't know, so I think the score given might be a bit presumptous /
-                due to luck. To see what I have learned up to this point, see the <a class="in-text-link" href="my-journey.html">My Journey</a> page.
-            </p>
+  <div id="march-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>March 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
+
+
+  <div id="april-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>April 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
+
+
+  <div id="may-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>May 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
+
+
+  <div id="june-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>June 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
+
+
+  <div id="july-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>July 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      This project had not yet begun. See August 2026 for the
+      first entry.
+    </p>
+  </div>
+
+
+  <!-- AUGUST 2026 -->
+
+  <div id="august-2026" class="month-content active-month">
+
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>August 2026</h2>
+    </div>
+
+    <article class="progress-entry">
+
+      <div class="progress-date">
+        Thursday, August 6th
+      </div>
+
+      <div class="progress-entry-content">
+
+        <img class="progress-img" src="original_placement_exam_score.png" alt="Results from my German placement exam">
+
+        <div class="progress-text">
+
+          <p>
+            On this first day, I simply took a placement test
+            through the Goethe-Institut to find out my current
+            approximate German level.
+          </p>
+
+          <p>
+            I mainly used context clues and filled in some blanks
+            that I didn't know, so I think the score given might
+            be somewhat presumptuous due to luck.
+          </p>
+
+          <p>
+            To see what I have learned up to this point, see the
+            <a class="in-text-link" href="my-journey.html">
+              My Journey
+            </a>
+            page.
+          </p>
 
         </div>
 
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <div id="september-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>September 2026</h2>
     </div>
 
-</div>
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
 
-</header>
+
+  <div id="october-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>October 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="november-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>November 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="december-2026" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>December 2026</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+</section>
+
+  </section>
+
+  <!-- =========================================================
+       2027
+       ========================================================= -->
+
+  <section id="year-2027" class="year-content">
+
+<section class="progress-calendar">
+
+  <div class="calendar-header">
+    <h2>2027</h2>
+    <p>Select a month to view my progress.</p>
+  </div>
+
+
+  <div class="month-grid">
+
+    <button class="month-button"
+      onclick="showMonth('january-2027')">
+      January
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('february-2027')">
+      February
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('march-2027')">
+      March
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('april-2027')">
+      April
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('may-2027')">
+      May
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('june-2027')">
+      June
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('july-2027')">
+      July
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('august-2027')">
+      August
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('september-2027')">
+      September
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('october-2027')">
+      October
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('november-2027')">
+      November
+    </button>
+
+    <button class="month-button"
+      onclick="showMonth('december-2027')">
+      December
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- 2027 MONTHLY CONTENT -->
+
+<section class="progress-updates">
+
+  <div id="january-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>January 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="february-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>February 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="march-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>March 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="april-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>April 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="may-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>May 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="june-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>June 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="july-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>July 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="august-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>August 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="september-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>September 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="october-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>October 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="november-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>November 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+
+  <div id="december-2027" class="month-content">
+    <div class="selected-month-heading">
+      <span>Monthly Progress</span>
+      <h2>December 2027</h2>
+    </div>
+
+    <p class="no-updates">
+      No progress update has been added for this month yet.
+    </p>
+  </div>
+
+</section>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Neel's German Learning</p>
+  <p>Website in progress.</p>
+  <p>Remember, practice makes progress.</p>
+</footer>
+
+
   </body>
 </html>

@@ -3,33 +3,330 @@
   <head>
     <title>Vocab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vocab.css">
     <script src="script.js"></script>
   </head>
 
   <body>
-    <header class="desktop-header-3 fixed-top">
+    <header class="site-header">
+  <nav class="navbar">
 
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <b class="navbar-brand">German Learning</b>
+<a href="home.html" class="navbar-brand">
+  Neel's German Learning
+</a>
 
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Navigation</button>
+<div class="dropdown">
+  <button onclick="navButton()" class="dropbtn">
+    Navigation <span class="arrow">▼</span>
+  </button>
 
-          <div id="myDropdown" class="dropdown-content">
-            <a href="home.html">Home</a>
-            <a href="my-journey.html">My Journey</a>
-            <a href="vocab.html">Vocabulary</a>
-            <a href="grammar.html">Grammar</a>
-            <a href="resources.html">Resources</a>
-            <a href="progress.html">Progress</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-        </nav>
-      </div>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="home.html">Home</a>
+    <a href="my-journey.html">My Journey</a>
+    <a href="vocab.html">Vocabulary</a>
+    <a href="grammar.html">Grammar</a>
+    <a href="resources.html">Resources</a>
+    <a href="progress.html">Progress</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
 
-    </header>
+  </nav>
+</header>
+
+<main>
+
+  <!-- =========================
+       VOCABULARY BY TOPIC
+       ========================= -->
+
+  <section class="vocab-intro">
+    <h1>Vocabulary</h1>
+    <div class="intro-divider"></div>
+
+<p>
+  Explore vocabulary by topic, or see the words I have encountered
+  throughout my German-learning journey.
+</p>
+
+  </section>
+
+  <section class="vocab-topics">
+
+<h2>Vocabulary by Topic</h2>
+
+<p class="section-description">
+  Select a topic to see a list of related German vocabulary.
+</p>
+
+
+<div class="vocab-dropdown">
+  <button class="vocab-button"
+    onclick="showDropdown('schoolDropdown')">
+    <span>School</span>
+    <span class="vocab-arrow">▼</span>
+  </button>
+
+  <div id="schoolDropdown" class="vocab-dropdown-content">
+
+    <div class="vocab-word">
+      <strong>die Schule</strong>
+      <span>(n) school</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Lehrer / die Lehrerin</strong>
+      <span>(n) teacher (male/female)</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Schüler / die Schülerin</strong>
+      <span>(n) student (male/female)</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>die Klasse</strong>
+      <span>(n) class</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>die Hausaufgaben</strong>
+      <span>(n) homework</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>die Prüfung</strong>
+      <span>(n) exam</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>die Note</strong>
+      <span>(n) grade</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Stundenplan</strong>
+      <span>(n) schedule</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>die Pause</strong>
+      <span>(n) break</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Fach</strong>
+      <span>(n) subject</span>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="vocab-dropdown">
+  <button class="vocab-button"
+    onclick="showDropdown('foodDropdown')">
+    <span>Food</span>
+    <span class="vocab-arrow">▼</span>
+  </button>
+
+  <div id="foodDropdown" class="vocab-dropdown-content">
+
+    <div class="vocab-word">
+      <strong>das Essen</strong>
+      <span>(n) food</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Getränk</strong>
+      <span>(n) drink</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Wasser</strong>
+      <span>(n) water</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Brot</strong>
+      <span>(n) bread</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Fleisch</strong>
+      <span>(n) meat</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Käse</strong>
+      <span>(n) cheese</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Kaffee</strong>
+      <span>(n) coffee</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Gemüse</strong>
+      <span>(n) vegetable</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>das Obst</strong>
+      <span>(n) fruit</span>
+    </div>
+
+    <div class="vocab-word">
+      <strong>der Apfel</strong>
+      <span>(n) apple</span>
+    </div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!-- =========================
+       CURRENT MONTH
+       ========================= -->
+
+  <section class="monthly-vocabulary current-month">
+
+<div class="month-heading">
+  <span class="month-label">Current Month</span>
+  <h2>August 2026</h2>
+</div>
+
+<p class="month-description">
+  Recently, I have learned a lot of words relating to articles of clothing. Here are a few of them:
+</p>
+
+<ul class="word-list">
+  <li>
+    <strong>die Socke</strong>
+    <span>(n) sock</span>
+  </li>
+
+  <li>
+    <strong>der Schlafanzug</strong>
+    <span>(n) pajamas</span>
+  </li>
+
+  <li>
+    <strong>der Stiefel</strong>
+    <span>(n) boot</span>
+  </li>
+
+  <li>
+    <strong>der Unterhemd</strong>
+    <span>(n) undershirt</span>
+  </li>
+
+  <li>
+    <strong>der Schuh</strong>
+    <span>(n) shoe</span>
+  </li>
+
+  <li>
+    <strong>der Rock</strong>
+    <span>(n) skirt</span>
+  </li>
+</ul>
+
+  </section>
+
+  <!-- =========================
+       PREVIOUS MONTHS
+       ========================= -->
+
+  <section class="previous-vocabulary">
+
+<h2>Previous Months</h2>
+
+<div class="month-dropdown">
+
+  <button class="month-button"
+    onclick="showDropdown('july2026Dropdown')">
+
+    <span>July 2026</span>
+    <span class="month-arrow">▼</span>
+
+  </button>
+
+  <div id="july2026Dropdown" class="month-content">
+
+    <ul class="word-list">
+      <li>
+        <strong>sprechen</strong>
+        <span>(v) to speak</span>
+      </li>
+
+      <li>
+        <strong>der Staatsbürger</strong>
+        <span>(n) citizen</span>
+      </li>
+
+      <li>
+        <strong>die Glatze</strong>
+        <span>(n) bald head</span>
+      </li>
+
+      <li>
+        <strong>das Geschlecht</strong>
+        <span>(n) gender</span>
+      </li>
+
+
+    </ul>
+
+  </div>
+
+</div>
+
+
+<div class="month-dropdown">
+
+  <button class="month-button"
+    onclick="showDropdown('june2026Dropdown')">
+
+    <span>June 2026</span>
+    <span class="month-arrow">▼</span>
+
+  </button>
+
+  <div id="june2026Dropdown" class="month-content">
+
+    <ul class="word-list">
+      <li>
+        <strong>sein</strong>
+        <span>(v) to be</span>
+      </li>
+
+      <li>
+        <strong>der Gesichtsausdruck</strong>
+        <span>(n) facial expression</span>
+      </li>
+
+      <li>
+        <strong>der Lehrer/die Lehrerin</strong>
+        <span>(n) teacher (male/female)</span>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Neel's German Learning</p>
+  <p>Website in progress.</p>
+  <p>Remember, practice makes progress.</p>
+</footer>
+
   </body>
 </html>

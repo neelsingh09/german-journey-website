@@ -1,0 +1,537 @@
+/* =========================
+GENERAL PAGE
+========================= */
+
+body {
+margin: 0;
+min-height: 100vh;
+
+display: flex;
+flex-direction: column;
+
+background-color: #FFF8E7;
+color: #33382f;
+
+font-family: Arial, sans-serif;
+}
+
+main {
+flex: 1;
+}
+
+/* =========================
+SITE HEADER / NAVIGATION
+========================= */
+
+.site-header {
+background-color: #fff0ce;
+border-bottom: 2px solid #9CAF88;
+box-shadow: 0 3px 0 rgba(156, 175, 136, 0.25);
+padding: 0 25px;
+}
+
+.navbar {
+max-width: 1100px;
+height: 75px;
+margin: 0 auto;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.navbar-brand {
+color: #2f3b2b;
+font-size: 25px;
+font-weight: bold;
+text-decoration: none;
+letter-spacing: -0.3px;
+
+transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+color: #6c7e5a;
+}
+
+/* Navigation button */
+
+.dropdown {
+position: relative;
+}
+
+.dropbtn {
+background-color: #9CAF88;
+color: #273122;
+
+padding: 11px 16px;
+font-size: 15px;
+font-weight: bold;
+
+border: 2px solid #7f956d;
+border-radius: 8px;
+
+cursor: pointer;
+
+transition:
+background-color 0.2s ease,
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.dropbtn:hover {
+background-color: #aabd96;
+transform: translateY(-2px);
+box-shadow: 3px 3px 0 #6c7e5a;
+}
+
+.arrow {
+font-size: 11px;
+margin-left: 5px;
+}
+
+/* Navigation dropdown */
+
+.dropdown-content {
+display: none;
+
+position: absolute;
+right: 0;
+top: calc(100% + 10px);
+
+min-width: 190px;
+
+background-color: #fff0ce;
+
+border: 2px solid #9CAF88;
+border-radius: 10px;
+
+box-shadow: 5px 5px 0 #9CAF88;
+
+overflow: hidden;
+z-index: 1000;
+}
+
+.dropdown-content a {
+color: #33382f;
+
+padding: 12px 16px;
+
+text-decoration: none;
+font-size: 15px;
+
+display: block;
+
+transition:
+background-color 0.15s ease,
+padding-left 0.15s ease;
+}
+
+.dropdown-content a:hover {
+background-color: #d3e7c0;
+padding-left: 21px;
+}
+
+.dropdown-content.show, .vocab-dropdown-content.show {
+  display: block;
+}
+
+/* Navigation animation */
+
+.dropdown-content.show a {
+animation: dropdownItem 0.3s ease forwards;
+opacity: 0;
+}
+
+.dropdown-content.show a:nth-child(1) {
+animation-delay: 0.05s;
+}
+
+.dropdown-content.show a:nth-child(2) {
+animation-delay: 0.10s;
+}
+
+.dropdown-content.show a:nth-child(3) {
+animation-delay: 0.15s;
+}
+
+.dropdown-content.show a:nth-child(4) {
+animation-delay: 0.20s;
+}
+
+.dropdown-content.show a:nth-child(5) {
+animation-delay: 0.25s;
+}
+
+.dropdown-content.show a:nth-child(6) {
+animation-delay: 0.30s;
+}
+
+.dropdown-content.show a:nth-child(7) {
+animation-delay: 0.35s;
+}
+
+@keyframes dropdownItem {
+from {
+opacity: 0;
+transform: translateY(-5px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* =========================
+VOCABULARY INTRO
+========================= */
+
+.vocab-intro {
+max-width: 700px;
+margin: 55px auto 45px;
+padding: 0 25px;
+text-align: center;
+}
+
+.vocab-intro h1 {
+margin: 0;
+
+color: #2f3b2b;
+font-size: 36px;
+font-weight: 700;
+}
+
+.vocab-intro .intro-divider {
+width: 65px;
+height: 4px;
+
+margin: 14px auto 22px;
+
+background-color: #9CAF88;
+border-radius: 10px;
+}
+
+.vocab-intro p {
+margin: 0;
+
+color: #4f514b;
+font-size: 16px;
+line-height: 1.7;
+}
+
+/* =========================
+TOPIC VOCABULARY
+========================= */
+
+.vocab-topics {
+max-width: 750px;
+margin: 0 auto 65px;
+padding: 0 25px;
+}
+
+.vocab-topics h2 {
+margin: 0 0 5px;
+
+color: #2f3b2b;
+font-size: 25px;
+}
+
+.section-description {
+margin: 0 0 22px;
+
+color: #6a6d63;
+font-size: 15px;
+}
+
+/* Topic buttons */
+
+.vocab-dropdown {
+margin-bottom: 12px;
+}
+
+.vocab-button {
+width: 100%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 15px 18px;
+
+background-color: transparent;
+
+border: none;
+border-bottom: 2px solid #9CAF88;
+
+color: #374332;
+
+font-size: 18px;
+font-weight: bold;
+text-align: left;
+
+cursor: pointer;
+
+transition:
+background-color 0.2s ease,
+padding-left 0.2s ease;
+}
+
+.vocab-button:hover {
+background-color: rgba(156, 175, 136, 0.15);
+padding-left: 24px;
+}
+
+.vocab-arrow {
+color: #6c7e5a;
+font-size: 12px;
+}
+
+/* Topic vocabulary */
+
+.vocab-dropdown-content {
+display: none;
+
+padding: 5px 18px 10px;
+
+background-color: rgba(255, 240, 206, 0.55);
+
+border-left: 3px solid #9CAF88;
+}
+
+.vocab-dropdown-content.show {
+display: block;
+}
+
+.vocab-word {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+
+padding: 9px 5px;
+
+border-bottom: 1px solid rgba(156, 175, 136, 0.25);
+}
+
+.vocab-word:last-child {
+border-bottom: none;
+}
+
+.vocab-word strong {
+color: #374332;
+font-size: 15px;
+}
+
+.vocab-word span {
+color: #777a71;
+font-size: 14px;
+}
+
+/* =========================
+CURRENT MONTH
+========================= */
+
+.monthly-vocabulary {
+max-width: 750px;
+margin: 0 auto 65px;
+padding: 0 25px;
+}
+
+.current-month {
+position: relative;
+
+padding-left: 35px;
+
+border-left: 4px solid #9CAF88;
+}
+
+.month-heading {
+margin-bottom: 12px;
+}
+
+.month-label {
+display: block;
+
+margin-bottom: 3px;
+
+color: #6c7e5a;
+
+font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+
+letter-spacing: 1.5px;
+}
+
+.month-heading h2 {
+margin: 0;
+
+color: #2f3b2b;
+font-size: 28px;
+}
+
+.month-description {
+margin: 0 0 18px;
+
+color: #4f514b;
+font-size: 16px;
+}
+
+/* Word list */
+
+.word-list {
+list-style: none;
+
+margin: 0;
+padding: 0;
+}
+
+.word-list li {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+
+padding: 11px 5px;
+
+border-bottom: 1px solid rgba(156, 175, 136, 0.35);
+}
+
+.word-list li:last-child {
+border-bottom: none;
+}
+
+.word-list strong {
+color: #374332;
+font-size: 16px;
+}
+
+.word-list span {
+color: #777a71;
+font-size: 14px;
+}
+
+/* =========================
+PREVIOUS MONTHS
+========================= */
+
+.previous-vocabulary {
+max-width: 750px;
+margin: 0 auto 70px;
+padding: 0 25px;
+}
+
+.previous-vocabulary h2 {
+margin: 0 0 20px;
+
+color: #2f3b2b;
+font-size: 25px;
+}
+
+.month-dropdown {
+margin-bottom: 10px;
+}
+
+/* Month buttons */
+
+.month-button {
+width: 100%;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 14px 5px;
+
+background-color: transparent;
+
+border: none;
+border-bottom: 1px solid #b8c5aa;
+
+color: #4f5c47;
+
+font-size: 16px;
+font-weight: bold;
+text-align: left;
+
+cursor: pointer;
+
+transition:
+color 0.2s ease,
+padding-left 0.2s ease;
+}
+
+.month-button:hover {
+color: #2f3b2b;
+padding-left: 10px;
+}
+
+.month-arrow {
+color: #7f956d;
+font-size: 11px;
+}
+
+/* Previous month content */
+
+.month-content {
+display: none;
+
+padding: 8px 15px;
+
+background-color: rgba(255, 240, 206, 0.5);
+
+border-left: 3px solid #d0dac5;
+}
+
+.month-content.show {
+display: block;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+.vocab-intro h1 {
+font-size: 32px;
+}
+
+.vocab-word,
+.word-list li {
+flex-direction: column;
+gap: 3px;
+}
+
+.current-month {
+padding-left: 20px;
+}
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.site-footer {
+margin-top: auto;
+padding: 25px 20px;
+
+background-color: #fff0ce;
+
+border-top: 2px solid #9CAF88;
+
+text-align: center;
+color: #5b6254;
+
+box-shadow: 0 -3px 0 rgba(156, 175, 136, 0.2);
+}
+
+.site-footer p {
+margin: 4px 0;
+font-size: 14px;
+}
+
+.site-footer p:first-child {
+font-weight: bold;
+color: #3f4839;
+}
