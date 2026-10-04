@@ -3,7 +3,7 @@ NAVIGATION DROPDOWN
 ========================= */
 
 function navButton() {
-document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 /* =========================
@@ -11,18 +11,17 @@ VOCABULARY DROPDOWNS
 ========================= */
 
 function showDropdown(dropdownId) {
+  // Close all other vocabulary dropdowns
+  const dropdowns = document.querySelectorAll(".vocab-dropdown-content");
 
-// Close all other vocabulary dropdowns
-const dropdowns = document.querySelectorAll(".vocab-dropdown-content");
+  dropdowns.forEach((dropdown) => {
+    if (dropdown.id !== dropdownId) {
+      dropdown.classList.remove("show");
+    }
+  });
 
-dropdowns.forEach(dropdown => {
-if (dropdown.id !== dropdownId) {
-dropdown.classList.remove("show");
-}
-});
-
-// Toggle the selected dropdown
-document.getElementById(dropdownId).classList.toggle("show");
+  // Toggle the selected dropdown
+  document.getElementById(dropdownId).classList.toggle("show");
 }
 
 /* =========================
@@ -30,109 +29,96 @@ CLOSE DROPDOWNS WHEN
 CLICKING OUTSIDE
 ========================= */
 
-window.onclick = function(event) {
+window.onclick = function (event) {
+  // Close navigation dropdown
+  if (!event.target.closest(".dropdown")) {
+    const navDropdown = document.getElementById("myDropdown");
 
-// Close navigation dropdown
-if (!event.target.closest(".dropdown")) {
-const navDropdown = document.getElementById("myDropdown");
+    if (navDropdown.classList.contains("show")) {
+      navDropdown.classList.remove("show");
+    }
+  }
 
-if (navDropdown.classList.contains("show")) {
-  navDropdown.classList.remove("show");
-}
+  // Close vocabulary dropdowns
+  if (!event.target.closest(".vocab-dropdown")) {
+    const vocabDropdowns = document.querySelectorAll(".vocab-dropdown-content");
 
-}
-
-// Close vocabulary dropdowns
-if (!event.target.closest(".vocab-dropdown")) {
-const vocabDropdowns =
-document.querySelectorAll(".vocab-dropdown-content");
-
-vocabDropdowns.forEach(dropdown => {
-  dropdown.classList.remove("show");
-});
-
-}
+    vocabDropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("show");
+    });
+  }
 };
 
 function showYear(yearId, button) {
+  // Hide all years
+  const years = document.querySelectorAll(".year-content");
 
-// Hide all years
-const years = document.querySelectorAll(".year-content");
+  years.forEach((year) => {
+    year.classList.remove("active-year");
+  });
 
-years.forEach(year => {
-year.classList.remove("active-year");
-});
+  // Remove active styling from year buttons
+  const yearButtons = document.querySelectorAll(".year-button");
 
-// Remove active styling from year buttons
-const yearButtons = document.querySelectorAll(".year-button");
+  yearButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
 
-yearButtons.forEach(button => {
-button.classList.remove("active");
-});
+  // Show selected year
+  document.getElementById(yearId).classList.add("active-year");
 
-// Show selected year
-document.getElementById(yearId).classList.add("active-year");
+  // Highlight selected year button
+  button.classList.add("active");
 
-// Highlight selected year button
-button.classList.add("active");
+  // Reset the month selection inside the selected year
+  const selectedYear = document.getElementById(yearId);
 
-// Reset the month selection inside the selected year
-const selectedYear = document.getElementById(yearId);
+  const months = selectedYear.querySelectorAll(".month-content");
 
-const months = selectedYear.querySelectorAll(".month-content");
+  months.forEach((month) => {
+    month.classList.remove("active-month");
+  });
 
-months.forEach(month => {
-month.classList.remove("active-month");
-});
+  const monthButtons = selectedYear.querySelectorAll(".month-button");
 
-const monthButtons = selectedYear.querySelectorAll(".month-button");
-
-monthButtons.forEach(monthButton => {
-monthButton.classList.remove("active");
-});
-
+  monthButtons.forEach((monthButton) => {
+    monthButton.classList.remove("active");
+  });
 }
 
 function showMonth(monthId) {
+  // Find the year containing the selected month
+  const selectedMonth = document.getElementById(monthId);
 
-// Find the year containing the selected month
-const selectedMonth = document.getElementById(monthId);
+  if (!selectedMonth) {
+    return;
+  }
 
-if (!selectedMonth) {
-return;
-}
+  const selectedYear = selectedMonth.closest(".year-content");
 
-const selectedYear = selectedMonth.closest(".year-content");
+  // Hide all months within that year
+  const months = selectedYear.querySelectorAll(".month-content");
 
-// Hide all months within that year
-const months = selectedYear.querySelectorAll(".month-content");
+  months.forEach((month) => {
+    month.classList.remove("active-month");
+  });
 
-months.forEach(month => {
-month.classList.remove("active-month");
-});
+  // Remove active styling from month buttons
+  const monthButtons = selectedYear.querySelectorAll(".month-button");
 
-// Remove active styling from month buttons
-const monthButtons = selectedYear.querySelectorAll(".month-button");
+  monthButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
 
-monthButtons.forEach(button => {
-button.classList.remove("active");
-});
+  // Show selected month
+  selectedMonth.classList.add("active-month");
 
-// Show selected month
-selectedMonth.classList.add("active-month");
+  // Highlight selected month button
+  const buttons = selectedYear.querySelectorAll(".month-button");
 
-// Highlight selected month button
-const buttons = selectedYear.querySelectorAll(".month-button");
-
-buttons.forEach(button => {
-
-if (
-  button.getAttribute("onclick") ===
-  `showMonth('${monthId}')`
-) {
-  button.classList.add("active");
-}
-
-});
-
+  buttons.forEach((button) => {
+    if (button.getAttribute("onclick") === `showMonth('${monthId}')`) {
+      button.classList.add("active");
+    }
+  });
 }

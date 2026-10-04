@@ -1,332 +1,755 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Vocab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="vocab.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="vocab.css" />
     <script src="script.js"></script>
   </head>
 
   <body>
     <header class="site-header">
-  <nav class="navbar">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand"> Neel's German Learning </a>
 
-<a href="home.html" class="navbar-brand">
-  Neel's German Learning
-</a>
+        <div class="dropdown">
+          <button onclick="navButton()" class="dropbtn">
+            Navigation <span class="arrow">▼</span>
+          </button>
 
-<div class="dropdown">
-  <button onclick="navButton()" class="dropbtn">
-    Navigation <span class="arrow">▼</span>
-  </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="my-journey.html">My Journey</a>
+            <a href="vocab.html">Vocabulary</a>
+            <a href="grammar.html">Grammar</a>
+            <a href="resources.html">Resources</a>
+            <a href="progress.html">Progress</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-  <div id="myDropdown" class="dropdown-content">
-    <a href="home.html">Home</a>
-    <a href="my-journey.html">My Journey</a>
-    <a href="vocab.html">Vocabulary</a>
-    <a href="grammar.html">Grammar</a>
-    <a href="resources.html">Resources</a>
-    <a href="progress.html">Progress</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
-
-  </nav>
-</header>
-
-<main>
-
-  <!-- =========================
+    <main>
+      <!-- =========================
        VOCABULARY BY TOPIC
        ========================= -->
 
-  <section class="vocab-intro">
-    <h1>Vocabulary</h1>
-    <div class="intro-divider"></div>
+      <section class="vocab-intro">
+        <h1>Vocabulary</h1>
+        <div class="intro-divider"></div>
 
-<p>
-  Explore vocabulary by topic, or see the words I have encountered
-  throughout my German-learning journey.
-</p>
+        <p>
+          Explore vocabulary by topic, or see the words I have encountered
+          throughout my German-learning journey.
+        </p>
+      </section>
 
-  </section>
+      <section class="vocab-topics">
+        <h2>Vocabulary by Topic</h2>
 
-  <section class="vocab-topics">
+        <p class="section-description">
+          Select a topic to see a short, simple, yet useful list of related
+          German vocabulary.
+        </p>
 
-<h2>Vocabulary by Topic</h2>
+        <div class="vocab-dropdown">
+          <button class="vocab-button" onclick="showDropdown('schoolDropdown')">
+            <span>School</span>
+            <span class="vocab-arrow">▼</span>
+          </button>
 
-<p class="section-description">
-  Select a topic to see a list of related German vocabulary.
-</p>
+          <div id="schoolDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>die Schule</strong>
+              <span>(n) school</span>
+            </div>
 
+            <div class="vocab-word">
+              <strong>der Lehrer / die Lehrerin</strong>
+              <span>(n) teacher (male/female)</span>
+            </div>
 
-<div class="vocab-dropdown">
-  <button class="vocab-button"
-    onclick="showDropdown('schoolDropdown')">
-    <span>School</span>
-    <span class="vocab-arrow">▼</span>
-  </button>
+            <div class="vocab-word">
+              <strong>der Schüler / die Schülerin</strong>
+              <span>(n) student (male/female)</span>
+            </div>
 
-  <div id="schoolDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>die Hausaufgaben</strong>
+              <span>(n) homework</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Schule</strong>
-      <span>(n) school</span>
-    </div>
+            <div class="vocab-word">
+              <strong>die Prüfung</strong>
+              <span>(n) exam</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Lehrer / die Lehrerin</strong>
-      <span>(n) teacher (male/female)</span>
-    </div>
+            <div class="vocab-word">
+              <strong>die Note</strong>
+              <span>(n) grade</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Schüler / die Schülerin</strong>
-      <span>(n) student (male/female)</span>
-    </div>
+            <div class="vocab-word">
+              <strong>gut</strong>
+              <span>(adj) good</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Klasse</strong>
-      <span>(n) class</span>
-    </div>
+            <div class="vocab-word">
+              <strong>schlecht</strong>
+              <span>(adj) bad</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Hausaufgaben</strong>
-      <span>(n) homework</span>
-    </div>
+            <div class="vocab-word">
+              <strong>leicht</strong>
+              <span>(adj) easy</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Prüfung</strong>
-      <span>(n) exam</span>
-    </div>
+            <div class="vocab-word">
+              <strong>schwer</strong>
+              <span>(adj) difficult / hard</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Note</strong>
-      <span>(n) grade</span>
-    </div>
+            <div class="vocab-word">
+              <strong>richtig</strong>
+              <span>(adj) correct / right</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Stundenplan</strong>
-      <span>(n) schedule</span>
-    </div>
+            <div class="vocab-word">
+              <strong>falsch</strong>
+              <span>(adj) wrong / incorrect</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>die Pause</strong>
-      <span>(n) break</span>
-    </div>
+            <div class="vocab-word">
+              <strong>fleißig</strong>
+              <span>(adj) hard-working</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>das Fach</strong>
-      <span>(n) subject</span>
-    </div>
+            <div class="vocab-word">
+              <strong>lernen</strong>
+              <span>(v) to learn / study</span>
+            </div>
 
-  </div>
-</div>
+            <div class="vocab-word">
+              <strong>lesen</strong>
+              <span>(v) to read</span>
+            </div>
 
+            <div class="vocab-word">
+              <strong>schreiben</strong>
+              <span>(v) to write</span>
+            </div>
 
-<div class="vocab-dropdown">
-  <button class="vocab-button"
-    onclick="showDropdown('foodDropdown')">
-    <span>Food</span>
-    <span class="vocab-arrow">▼</span>
-  </button>
+            <div class="vocab-word">
+              <strong>verstehen</strong>
+              <span>(v) to understand</span>
+            </div>
 
-  <div id="foodDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>fragen</strong>
+              <span>(v) to ask</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>das Essen</strong>
-      <span>(n) food</span>
-    </div>
+            <div class="vocab-word">
+              <strong>antworten</strong>
+              <span>(v) to answer</span>
+            </div>
+          </div>
+        </div>
 
-    <div class="vocab-word">
-      <strong>das Getränk</strong>
-      <span>(n) drink</span>
-    </div>
+<!-- =========================================================
+       FOOD VOCABULARY
+       ========================================================= -->
 
-    <div class="vocab-word">
-      <strong>das Wasser</strong>
-      <span>(n) water</span>
-    </div>
+        <div class="vocab-dropdown">
+          <button class="vocab-button" onclick="showDropdown('foodDropdown')">
+            <span>Food</span>
+            <span class="vocab-arrow">▼</span>
+          </button>
 
-    <div class="vocab-word">
-      <strong>das Brot</strong>
-      <span>(n) bread</span>
-    </div>
+          <div id="foodDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>das Essen</strong>
+              <span>(n) food</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>das Fleisch</strong>
-      <span>(n) meat</span>
-    </div>
+            <div class="vocab-word">
+              <strong>das Getränk</strong>
+              <span>(n) drink</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Käse</strong>
-      <span>(n) cheese</span>
-    </div>
+            <div class="vocab-word">
+              <strong>das Wasser</strong>
+              <span>(n) water</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Kaffee</strong>
-      <span>(n) coffee</span>
-    </div>
+            <div class="vocab-word">
+              <strong>das Brot</strong>
+              <span>(n) bread</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>das Gemüse</strong>
-      <span>(n) vegetable</span>
-    </div>
+            <div class="vocab-word">
+              <strong>der Käse</strong>
+              <span>(n) cheese</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>das Obst</strong>
-      <span>(n) fruit</span>
-    </div>
+            <div class="vocab-word">
+              <strong>der Apfel</strong>
+              <span>(n) apple</span>
+            </div>
 
-    <div class="vocab-word">
-      <strong>der Apfel</strong>
-      <span>(n) apple</span>
-    </div>
+            <div class="vocab-word">
+              <strong>lecker</strong>
+              <span>(adj) delicious / tasty</span>
+            </div>
 
-  </div>
-</div>
+            <div class="vocab-word">
+              <strong>gut</strong>
+              <span>(adj) good</span>
+            </div>
 
-  </section>
+            <div class="vocab-word">
+              <strong>schlecht</strong>
+              <span>(adj) bad</span>
+            </div>
 
-  <!-- =========================
+            <div class="vocab-word">
+              <strong>süß</strong>
+              <span>(adj) sweet</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>scharf</strong>
+              <span>(adj) spicy / hot</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>frisch</strong>
+              <span>(adj) fresh</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>hungrig</strong>
+              <span>(adj) hungry</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>durstig</strong>
+              <span>(adj) thirsty</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>essen</strong>
+              <span>(v) to eat</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>trinken</strong>
+              <span>(v) to drink</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>kochen</strong>
+              <span>(v) to cook</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>bestellen</strong>
+              <span>(v) to order</span>
+            </div>
+          </div>
+        </div>
+
+<!-- =========================================================
+       CLOTHING VOCABULARY
+       ========================================================= -->
+
+        <div class="vocab-dropdown">
+          <button
+            class="vocab-button"
+            onclick="showDropdown('clothingDropdown')"
+          >
+            <span>Clothing</span>
+            <span class="vocab-arrow">▼</span>
+          </button>
+
+          <div id="clothingDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>das Hemd</strong>
+              <span>(n) shirt</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>die Jacke</strong>
+              <span>(n) jacket</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>der Mantel</strong>
+              <span>(n) coat</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>der Pullover</strong>
+              <span>(n) sweater</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>das Kleid</strong>
+              <span>(n) dress</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>der Rock</strong>
+              <span>(n) skirt</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>die Mütze</strong>
+              <span>(n) hat / beanie</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>die Tasche</strong>
+              <span>(n) bag</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>bequem</strong>
+              <span>(adj) comfortable</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>sauber</strong>
+              <span>(adj) clean</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>schmutzig</strong>
+              <span>(adj) dirty</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>anziehen</strong>
+              <span>(v) to put on / get dressed</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>ausziehen</strong>
+              <span>(v) to take off / get undressed</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>waschen</strong>
+              <span>(v) to wash</span>
+            </div>
+          </div>
+        </div>
+
+<!-- =========================================================
+       RELATIONSHIPS VOCABULARY
+       ========================================================= -->
+
+                <div class="vocab-dropdown">
+          <button
+            class="vocab-button"
+            onclick="showDropdown('relationshipsDropdown')"
+          >
+            <span>Relationships</span>
+            <span class="vocab-arrow">▼</span>
+          </button>
+
+          <div id="relationshipsDropdown" class="vocab-dropdown-content">
+            <div class="vocab-word">
+              <strong>die Kinder</strong>
+            <span>(n) kids</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>die Geschwister</strong>
+            <span>(n) siblings</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>die Eltern</strong>
+            <span>(n) parents</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>leben</strong>
+            <span>(v) to live</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>besuchen</strong>
+            <span>(v) to visit</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>helfen</strong>
+            <span>(v) to help</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>lieben</strong>
+            <span>(v) to love</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>verwitwet</strong>
+            <span>(adj) widowed</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>jung</strong>
+            <span>(adj) young</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>alt</strong>
+            <span>(adj) old</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>verheiratet</strong>
+            <span>(adj) married</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>ledig</strong>
+            <span>(adj) single / unmarried</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>nett</strong>
+            <span>(adj) nice / kind</span>
+            </div>
+
+            <div class="vocab-word">
+              <strong>streng</strong>
+            <span>(adj) strict</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
        CURRENT MONTH
        ========================= -->
 
-  <section class="monthly-vocabulary current-month">
+      <section class="monthly-vocabulary current-month">
+        <div class="month-heading">
+          <span class="month-label">Current Month</span>
+          <h2>October 2026</h2>
+        </div>
 
-<div class="month-heading">
-  <span class="month-label">Current Month</span>
-  <h2>August 2026</h2>
-</div>
+        <p class="month-description">
+          Recently, I have learned a lot of words relating to intimacy/
+          feelings. Here are a few of them:
+        </p>
+        <p class="vocab-note">
+          <a class="in-text-link" href="resources.html">See how I learned.</a>
+        </p>
 
-<p class="month-description">
-  Recently, I have learned a lot of words relating to articles of clothing. Here are a few of them:
-</p>
+          <ul class="word-list">
+          <li>
+            <strong>die Umarmung</strong>
+            <span>(n) hug</span>
+          </li>
+          <li>
+            <strong>der Hass</strong>
+            <span>(n) hate</span>
+          </li>
+          <li>
+            <strong>die Liebe</strong>
+            <span>(n) love</span>
+          </li>
+          <li>
+            <strong>zusammenleben</strong>
+            <span>(v) to live together</span>
+          </li>
+          <li>
+            <strong>verloben</strong>
+            <span>(v) to be engaged</span>
+          </li>
+          <li>
+            <strong>heiraten</strong>
+            <span>(v) to be married</span>
+          </li>
+          <li>
+            <strong>küssen</strong>
+            <span>(v) to kiss</span>
+          </li>
+          <li>
+            <strong>schön</strong>
+            <span>(adj) beautiful</span>
+          </li>
+          <li>
+            <strong>hässlich</strong>
+            <span>(adj) ugly</span>
+          </li>
+          <li>
+            <strong>süß</strong>
+            <span>(adj) cute</span>
+          </li>
+          <li>
+            <strong>zärtlich</strong>
+            <span>(adj) tender</span>
+          </li>
+          <li>
+            <strong>leidenschaftlich</strong>
+            <span>(adj) passionate</span>
+          </li>
+          <li>
+            <strong>glücklich</strong>
+            <span>(adj) happy</span>
+          </li>
+          <li>
+            <strong>traurig</strong>
+            <span>(adj) sad</span>
+          </li>
+        </ul>
+      </section>
 
-<ul class="word-list">
-  <li>
-    <strong>die Socke</strong>
-    <span>(n) sock</span>
-  </li>
-
-  <li>
-    <strong>der Schlafanzug</strong>
-    <span>(n) pajamas</span>
-  </li>
-
-  <li>
-    <strong>der Stiefel</strong>
-    <span>(n) boot</span>
-  </li>
-
-  <li>
-    <strong>der Unterhemd</strong>
-    <span>(n) undershirt</span>
-  </li>
-
-  <li>
-    <strong>der Schuh</strong>
-    <span>(n) shoe</span>
-  </li>
-
-  <li>
-    <strong>der Rock</strong>
-    <span>(n) skirt</span>
-  </li>
-</ul>
-
-  </section>
-
-  <!-- =========================
+      <!-- =========================
        PREVIOUS MONTHS
        ========================= -->
 
-  <section class="previous-vocabulary">
-
-<h2>Previous Months</h2>
-
-<div class="month-dropdown">
-
-  <button class="month-button"
-    onclick="showDropdown('july2026Dropdown')">
-
-    <span>July 2026</span>
-    <span class="month-arrow">▼</span>
-
-  </button>
-
-  <div id="july2026Dropdown" class="month-content">
-
-    <ul class="word-list">
-      <li>
-        <strong>sprechen</strong>
-        <span>(v) to speak</span>
-      </li>
-
-      <li>
-        <strong>der Staatsbürger</strong>
-        <span>(n) citizen</span>
-      </li>
-
-      <li>
-        <strong>die Glatze</strong>
-        <span>(n) bald head</span>
-      </li>
-
-      <li>
-        <strong>das Geschlecht</strong>
-        <span>(n) gender</span>
-      </li>
-
-
-    </ul>
-
-  </div>
-
-</div>
-
+      <section class="previous-vocabulary">
+        <h2>Previous Months</h2>
 
 <div class="month-dropdown">
+          <button
+            class="month-button"
+            onclick="showDropdown('september2026Dropdown')"
+          >
+            <span>September 2026</span>
+            <span class="month-arrow">▼</span>
+          </button>
 
-  <button class="month-button"
-    onclick="showDropdown('june2026Dropdown')">
+          <div id="september2026Dropdown" class="month-content">
+            <ul class="word-list">
+          <li>
+            <strong>die Kinder</strong>
+            <span>(n) kids</span>
+          </li>
+          <li>
+            <strong>die Geschwister</strong>
+            <span>(n) siblings</span>
+          </li>
+          <li>
+            <strong>die Eltern</strong>
+            <span>(n) parents</span>
+          </li>
+          <li>
+            <strong>leben</strong>
+            <span>(v) to live</span>
+          </li>
+          <li>
+            <strong>besuchen</strong>
+            <span>(v) to visit</span>
+          </li>
+          <li>
+            <strong>helfen</strong>
+            <span>(v) to help</span>
+          </li>
+          <li>
+            <strong>lieben</strong>
+            <span>(v) to love</span>
+          </li>
+          <li>
+            <strong>verwitwet</strong>
+            <span>(adj) widowed</span>
+          </li>
+          <li>
+            <strong>jung</strong>
+            <span>(adj) young</span>
+          </li>
+          <li>
+            <strong>alt</strong>
+            <span>(adj) old</span>
+          </li>
+          <li>
+            <strong>verheiratet</strong>
+            <span>(adj) married</span>
+          </li>
+          <li>
+            <strong>ledig</strong>
+            <span>(adj) single / unmarried</span>
+          </li>
+          <li>
+            <strong>nett</strong>
+            <span>(adj) nice / kind</span>
+          </li>
+          <li>
+            <strong>streng</strong>
+            <span>(adj) strict</span>
+          </li>
+        </ul>
+          </div>
+        </div>
 
-    <span>June 2026</span>
-    <span class="month-arrow">▼</span>
+        <!-- August 2026 Dropdown -->
 
-  </button>
+        <div class="month-dropdown">
+          <button
+            class="month-button"
+            onclick="showDropdown('august2026Dropdown')"
+          >
+            <span>August 2026</span>
+            <span class="month-arrow">▼</span>
+          </button>
 
-  <div id="june2026Dropdown" class="month-content">
+          <div id="august2026Dropdown" class="month-content">
+            <ul class="word-list">
+              <li>
+                <strong>die Socke</strong>
+                <span>(n) sock</span>
+              </li>
 
-    <ul class="word-list">
-      <li>
-        <strong>sein</strong>
-        <span>(v) to be</span>
-      </li>
+              <li>
+                <strong>die Hose</strong>
+                <span>(n) pair of pants</span>
+              </li>
 
-      <li>
-        <strong>der Gesichtsausdruck</strong>
-        <span>(n) facial expression</span>
-      </li>
+              <li>
+                <strong>der Schuh</strong>
+                <span>(n) shoe</span>
+              </li>
 
-      <li>
-        <strong>der Lehrer/die Lehrerin</strong>
-        <span>(n) teacher (male/female)</span>
-      </li>
-    </ul>
+              <li>
+                <strong>das Hemd</strong>
+                <span>(n) shirt</span>
+              </li>
 
-  </div>
+              <li>
+                <strong>weit</strong>
+                <span>(adj) wide</span>
+              </li>
 
-</div>
+              <li>
+                <strong>eng</strong>
+                <span>(adj) tight</span>
+              </li>
 
-  </section>
+              <li>
+                <strong>kurz</strong>
+                <span>(adj) short</span>
+              </li>
 
-</main>
+              <li>
+                <strong>lang</strong>
+                <span>(adj) long</span>
+              </li>
 
-<footer class="site-footer">
-  <p>© 2026 Neel's German Learning</p>
-  <p>Website in progress.</p>
-  <p>Remember, practice makes progress.</p>
-</footer>
+              <li>
+                <strong>gepunktet</strong>
+                <span>(adj) spotted / polka-dotted</span>
+              </li>
 
+              <li>
+                <strong>gestreift</strong>
+                <span>(adj) striped</span>
+              </li>
+
+              <li>
+                <strong>anziehen</strong>
+                <span>(v) to put on / get dressed</span>
+              </li>
+
+              <li>
+                <strong>ausziehen</strong>
+                <span>(v) to take off / get undressed</span>
+              </li>
+
+              <li>
+                <strong>tragen</strong>
+                <span>(v) to wear</span>
+              </li>
+
+              <li>
+                <strong>passen</strong>
+                <span>(v) to fit</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- July 2026 Dropdown -->
+
+        <div class="month-dropdown">
+          <button
+            class="month-button"
+            onclick="showDropdown('july2026Dropdown')"
+          >
+            <span>July 2026 <small>(not tracked)</small></span>
+            <span class="month-arrow">▼</span>
+          </button>
+
+          <div id="july2026Dropdown" class="month-content">
+            <ul class="word-list">
+              <li>
+                <strong>sprechen</strong>
+                <span>(v) to speak</span>
+              </li>
+
+              <li>
+                <strong>der Staatsbürger</strong>
+                <span>(n) citizen</span>
+              </li>
+
+              <li>
+                <strong>die Glatze</strong>
+                <span>(n) bald head</span>
+              </li>
+
+              <li>
+                <strong>das Geschlecht</strong>
+                <span>(n) gender</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- June 2026 Dropdown -->
+
+        <div class="month-dropdown">
+          <button
+            class="month-button"
+            onclick="showDropdown('june2026Dropdown')"
+          >
+            <span>June 2026 <small>(not tracked)</small></span>
+            <span class="month-arrow">▼</span>
+          </button>
+
+          <div id="june2026Dropdown" class="month-content">
+            <ul class="word-list">
+              <li>
+                <strong>sein</strong>
+                <span>(v) to be</span>
+              </li>
+
+              <li>
+                <strong>der Gesichtsausdruck</strong>
+                <span>(n) facial expression</span>
+              </li>
+
+              <li>
+                <strong>der Lehrer/die Lehrerin</strong>
+                <span>(n) teacher (male/female)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Neel's German Learning</p>
+      <p>Website in progress</p>
+    </footer>
   </body>
 </html>

@@ -1,215 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <title>Contact | Neel's German Learning</title>
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contact | Neel's German Learning</title>
+    <link rel="stylesheet" href="styles.css" />
 
-<meta name="viewport"
-     content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
 
-  <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
 
-  <script src="script.js"></script>
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
-
-<body>
-
-  <!-- =========================
+  <body>
+    <!-- =========================
        NAVIGATION
        ========================= -->
 
-  <header class="site-header">
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand"> Neel's German Learning </a>
 
-<nav class="navbar">
+        <div class="dropdown">
+          <button onclick="navButton()" class="dropbtn">
+            Navigation <span class="arrow">▼</span>
+          </button>
 
-  <a href="home.html" class="navbar-brand">
-    Neel's German Learning
-  </a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="my-journey.html">My Journey</a>
+            <a href="vocab.html">Vocabulary</a>
+            <a href="grammar.html">Grammar</a>
+            <a href="resources.html">Resources</a>
+            <a href="progress.html">Progress</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-
-  <div class="dropdown">
-
-    <button onclick="navButton()" class="dropbtn">
-      Navigation <span class="arrow">▼</span>
-    </button>
-
-    <div id="myDropdown" class="dropdown-content">
-
-      <a href="home.html">Home</a>
-      <a href="my-journey.html">My Journey</a>
-      <a href="vocab.html">Vocabulary</a>
-      <a href="grammar.html">Grammar</a>
-      <a href="resources.html">Resources</a>
-      <a href="progress.html">Progress</a>
-      <a href="contact.html">Contact</a>
-
-    </div>
-
-  </div>
-
-</nav>
-
-  </header>
-
-  <main>
-
-<!-- =========================
+    <main>
+      <!-- =========================
      INTRODUCTION
      ========================= -->
 
-<section class="contact-intro">
+      <section class="contact-intro">
+        <p class="section-label">Who is this neel guy?</p>
 
-  <p class="section-label">
-    Who is this neel guy?
-  </p>
+        <h1>About Me</h1>
 
-  <h1>About Me</h1>
+        <div class="intro-divider"></div>
 
-  <div class="intro-divider"></div>
+        <p>
+          Hello! My name is Neel. I'm a high school student who is still
+          figuring out exactly what I want to do in life.
+        </p>
 
-  <p>
-    Hello! My name is Neel. I'm a high school student who is
-    passionate about using data to solve real-world problems
-    and learning new things.
-  </p>
+        <p>
+          Some of my hobbies include learning German, going to the gym, tutoring
+          online, and working on this website.
+        </p>
 
-  <p>
-    Some of my hobbies include learning German, going to the gym, tutoring online, and working on this website.
-  </p>
+        <p>
+          I believe that everyone should aim to make themselves a better person
+          every single day, even if only by a little bit. My personal motto is
+          "Practice makes progress, not perfect."
+        </p>
+      </section>
 
-  <p>
-    I believe that everyone should aim to make themselves a
-    better person every single day, even if only by a little bit.
-    My personal motto is "Practice makes progress, not perfect." 
-  </p>
-
-</section>
-
-
-<!-- =========================
+      <!-- =========================
      LOCATION
      ========================= -->
 
-<section class="contact-section">
+      <section class="contact-section">
+        <div class="contact-section-heading">
+          <span class="section-label"> Location </span>
 
-  <div class="contact-section-heading">
+          <h2>Where I'm From</h2>
+        </div>
 
-    <span class="section-label">
-      Location
-    </span>
+        <p>
+          I'm currently located in north Florida. My favorite parts about
+          Florida are the beautiful weather and pristine beaches.
+        </p>
+      </section>
 
-    <h2>Where I'm From</h2>
-
-  </div>
-
-  <p>
-    I'm currently located in Jacksonville, Florida.
-    My favorite parts about Jacksonville are the beautiful
-    weather and pristine beaches.
-  </p>
-
-</section>
-
-
-<!-- =========================
+      <!-- =========================
      SOCIALS
      ========================= -->
 
-<section class="contact-section">
+      <section class="contact-section">
+        <div class="contact-section-heading">
+          <span class="section-label"> Connect </span>
 
-  <div class="contact-section-heading">
+          <h2>Socials</h2>
+        </div>
 
-    <span class="section-label">
-      Connect
-    </span>
+        <p>
+          Feel free to connect with me on these platforms. I'm always open to
+          meeting new people and making connections.
+        </p>
 
-    <h2>Socials</h2>
+        <div class="social-links">
+          <a
+            href="https://github.com/neelsingh09"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
 
-  </div>
+            <span>GitHub</span>
+          </a>
 
-  <p>
-    Feel free to connect with me on these platforms.
-    I'm always open to meeting new people and making connections.
-  </p>
+          <a
+            href="https://linkedin.com/in/shaurya-neel-singh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
 
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </section>
 
-  <div class="social-links">
-
-    <a
-      href="https://github.com/neelsingh09"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="GitHub">
-
-      <i class="fa-brands fa-github"></i>
-
-      <span>GitHub</span>
-
-    </a>
-
-
-    <a
-      href="https://linkedin.com/in/shaurya-neel-singh"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="LinkedIn">
-
-      <i class="fa-brands fa-linkedin-in"></i>
-
-      <span>LinkedIn</span>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
+      <!-- =========================
      EMAIL
      ========================= -->
 
-<section class="contact-section email-section">
+      <section class="contact-section email-section">
+        <div class="contact-section-heading">
+          <span class="section-label"> Get in touch </span>
 
-  <div class="contact-section-heading">
+          <h2>Email</h2>
+        </div>
 
-    <span class="section-label">
-      Get in touch
-    </span>
+        <p>
+          If you would like my phone number for something, feel free to email
+          and ask.
+        </p>
 
-    <h2>Email</h2>
+        <a class="email-link" href="mailto:sneelsingh09+business@gmail.com">
+          sneelsingh09+business@gmail.com
+        </a>
+      </section>
+    </main>
 
-  </div>
-
-  <p>
-    If you would like my phone number for something,
-    feel free to email and ask.
-  </p>
-
-  <a
-    class="email-link"
-    href="mailto:sneelsingh09+business@gmail.com">
-
-    sneelsingh09+business@gmail.com
-
-  </a>
-
-</section>
-
-  </main>
-
-  <footer class="site-footer">
+    <footer class="site-footer">
       <p>© 2026 Neel's German Learning</p>
-      <p>Website in progress.</p>
-      <p>Remember, practice makes progress.</p>
+      <p>Website in progress</p>
     </footer>
-
-</body>
-
+  </body>
 </html>
